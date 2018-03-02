@@ -1,0 +1,14 @@
+{
+  "name": "mvn-ng-bw",
+  "version": "1.0.0",
+  "description": "Extension of angular-cli build watch to fire mvn generate-sources",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-watch": "^0.5.7"
+  }
+}
