@@ -3,12 +3,23 @@
   "version": "1.0.0",
   "description": "Extension of angular-cli build watch to fire mvn generate-sources",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "mvn-ng-bw": "bin/mvn-ng-bw"
   },
-  "author": "",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Rural-Sourcing/mvn-ng-build.git"
+  },
+  "author": {
+    "name": "Michael Morris",
+    "email": "michael.morris@ruralsourcing.com",
+    "url": "http://www.ruralsourcing.com"
+  },
   "license": "ISC",
   "dependencies": {
+    "@angular/cli": "^1.7.2",
+    "commander": "^2.14.1",
     "node-watch": "^0.5.7"
   }
 }
