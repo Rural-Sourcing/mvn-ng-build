@@ -12,8 +12,15 @@ program
 console.log("Starting watch");
 exec('ng build --watch');
 
-watch('.', { recursive: true }, function(evt, name) {
+watch('src/main/resources/META-INF/resources/inline.bundle.js', { recursive: false }, function(evt, name) {
   console.log('%s changed.', name);
-  exec('mvn generate-sources');
+  exec('mvn generate-sources', (e, stdout, stderr)=> {
+    if (e instanceof Error) {
+        console.error(e);
+        throw e;
+    }
+    console.log('stdout ', stdout);
+    console.log('stderr ', stderr);
+  });
 });
 
